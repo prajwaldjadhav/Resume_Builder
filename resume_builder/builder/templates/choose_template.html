@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="hero" class="hero section">
+    <div class="hero-bg">
+        <img src="/static/images/hero-bg-light.webp" alt="">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xxl-8 text-center">
+                <h3>Select Your Resume Template</h3>
+                <form method="post" action="{% url 'choose_template' %}">
+                    {% csrf_token %}
+                    <div class="template-options d-flex justify-content-center">
+                        <div class="template-option">
+                            <input type="radio" id="template1" name="template" value="template1" checked>
+                            <label for="template1">
+                                <img src="/static/images/resume-template1.png" alt="Template 1">
+                            </label>
+                        </div>
+                        <div class="template-option">
+                            <input type="radio" id="template2" name="template" value="template2">
+                            <label for="template2">
+                                <img src="/static/images/resume-template2.png" alt="Template 2">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <input class="btn btn-dark btn-lg" type="submit" value="Continue" 
+                               style="background-color: #388da8 !important; border-color: #388da8;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra-css %}
+<style>
+    .template-options {
+        margin-top: 20px;
+    }
+
+    .template-option {
+        display: inline-block;
+        margin: 20px;
+        cursor: pointer;
+    }
+
+    .template-option input {
+        display: none;
+    }
+
+    .template-option label {
+        display: block;
+        border: 2px solid transparent;
+        padding: 10px;
+        border-radius: 5px;
+        transition: border-color 0.3s;
+        cursor: pointer;
+    }
+
+    .template-option input:checked + label {
+        border-color: #388da8;
+    }
+
+    .template-option img {
+        max-width: 300px;
+        border-radius: 5px;
+    }
+</style>
+{% endblock %}

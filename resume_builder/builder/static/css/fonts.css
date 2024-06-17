@@ -1,0 +1,1003 @@
+.t1v1 {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 14px;
+    width: 641px;
+   /**************************---HEADER---*****************************************/
+   /**************************---DESCRIPTION---************************************/
+   /****************************---EDUCATION---************************************/
+   /**************************---EXPERIENCE---************************************/
+   /**************************---SKILLS---************************************/
+   /**************************---OTHER BLOCK---************************************/
+}
+.t1v1 code {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 300;
+}
+.t1v1 ol {
+    list-style-type: none;
+    list-style: none;
+    counter-reset: line-number;
+    padding-left: 0;
+    margin: 0;
+}
+.t1v1 ol li {
+    margin-bottom: 5px;
+    padding-left: 16px;
+    counter-increment: line-number;
+    position: relative;
+}
+.t1v1 ol li::after {
+    content: counter(line-number) ". ";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.t1v1 .bold {
+    font-weight: bold;
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+}
+.t1v1 .italic {
+    font-style: italic;
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 300;
+}
+.t1v1 .underline {
+    font-style: underline;
+}
+.t1v1 strong, .t1v1 b {
+    font-weight: bold;
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+}
+.t1v1 i {
+    font-style: italic;
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 300;
+}
+.t1v1 u {
+    font-style: underline;
+}
+.t1v1 em {
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 700;
+}
+.t1v1 a {
+    color: inherit;
+}
+.t1v1 .no-pf-img {
+    padding-left: 0px !important;
+}
+.t1v1 .header-part {
+    padding: 18px 18px 15px 18px;
+    display: block;
+}
+.t1v1 .header-part .outer-header-left {
+    display: inline-block;
+    vertical-align: middle;
+    width: 400px;
+}
+.t1v1 .header-part .outer-header-left .header-left .logo-area {
+    width: 90px;
+    height: 90px;
+    background-color: #de8535;
+    border-radius: 50px;
+    vertical-align: middle;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    overflow: hidden;
+    line-height: 90px;
+}
+.t1v1 .header-part .outer-header-left .header-left .logo-area img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+.t1v1 .header-part .outer-header-left .header-left .name-with-profession {
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+    padding: 0 15px;
+}
+.t1v1 .header-part .outer-header-left .header-left .name-with-profession .resume-name {
+    font-size: 36px;
+    color: #de8535;
+    line-height: 46px;
+}
+.t1v1 .header-part .outer-header-left .header-left .name-with-profession .resume-profession {
+    font-size: 16px;
+    padding-top: 6px;
+    line-height: 20px;
+}
+.t1v1 .header-part .outer-header-right {
+    display: inline-block;
+    width: 200px;
+    vertical-align: middle;
+}
+.t1v1 .header-part .outer-header-right .float-r {
+    float: right;
+}
+.t1v1 .header-part .outer-header-right .header-right {
+    color: #de8535;
+}
+.t1v1 .header-part .outer-header-right .add-line-break {
+    display: block;
+    word-break: break-all;
+}
+.t1v1 .about-me {
+    padding: 0 18px 15px 18px;
+}
+.t1v1 .about-me p {
+    margin: 0;
+    margin-bottom: 6px;
+}
+.t1v1 .about-me p:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .about-me ul {
+    margin-bottom: 6px;
+    list-style-type: none;
+    list-style: none;
+}
+.t1v1 .about-me ul:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .about-me ul li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 16px;
+    list-style: none;
+}
+.t1v1 .about-me ul li::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    background: #000 !important;
+    border-radius: 50%;
+    top: 6px;
+}
+.t1v1 .about-me ul li:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .edu-block {
+    padding: 0 18px 15px 18px;
+}
+.t1v1 .edu-block h2 {
+    font-size: 16px;
+    line-height: 16px;
+    color: #de8535;
+    border-bottom: solid 1px #de8535;
+    padding-bottom: 2px;
+    margin-bottom: 12px;
+}
+.t1v1 .edu-block .add-bot-mgn {
+    margin-bottom: 12px;
+}
+.t1v1 .edu-block .add-bot-mgn h3 span {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 3px;
+    display: inline;
+    width: 100%;
+}
+.t1v1 .edu-block .add-bot-mgn h3 i {
+    display: inline;
+    font-size: 10px;
+    line-height: 14px;
+    font-style: normal;
+}
+.t1v1 .edu-block .add-bot-mgn:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .edu-block .add-des-bottom-mgn p {
+    margin-bottom: 6px;
+}
+.t1v1 .edu-block .add-des-bottom-mgn p:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .edu-block .add-des-bottom-mgn ul {
+    margin-bottom: 6px;
+    list-style-type: none;
+    list-style: none;
+}
+.t1v1 .edu-block .add-des-bottom-mgn ul:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .edu-block .add-des-bottom-mgn ul li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 16px;
+    list-style-type: none;
+    list-style: none;
+}
+.t1v1 .edu-block .add-des-bottom-mgn ul li::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    background: #de8535;
+    border-radius: 50%;
+    top: 6px;
+}
+.t1v1 .edu-block .add-des-bottom-mgn ul li:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .prof-experience {
+    padding: 0 18px 15px 18px;
+}
+.t1v1 .prof-experience h2 {
+    font-size: 16px;
+    line-height: 16px;
+    color: #de8535;
+    border-bottom: solid 1px #de8535;
+    padding-bottom: 2px;
+    margin-bottom: 12px;
+}
+.t1v1 .prof-experience .add-bot-mgn {
+    margin-bottom: 12px;
+}
+.t1v1 .prof-experience .add-bot-mgn h3 span {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 3px;
+    display: inline;
+    width: 100%;
+}
+.t1v1 .prof-experience .add-bot-mgn h3 i {
+    display: inline;
+    font-size: 10px;
+    line-height: 14px;
+}
+.t1v1 .prof-experience .add-bot-mgn:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .prof-experience .add-des-bottom-mgn p {
+    margin-bottom: 6px;
+}
+.t1v1 .prof-experience .add-des-bottom-mgn p:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .prof-experience .add-des-bottom-mgn ul {
+    margin-bottom: 6px;
+    list-style-type: none;
+    list-style: none;
+}
+.t1v1 .prof-experience .add-des-bottom-mgn ul:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .prof-experience .add-des-bottom-mgn ul li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 16px;
+    list-style: none;
+}
+.t1v1 .prof-experience .add-des-bottom-mgn ul li::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    background: #de8535;
+    border-radius: 50%;
+    top: 6px;
+}
+.t1v1 .prof-experience .add-des-bottom-mgn ul li:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .skills-block {
+    padding: 0 18px 15px 18px;
+}
+.t1v1 .skills-block h2 {
+    font-size: 16px;
+    line-height: 16px;
+    color: #de8535;
+    border-bottom: solid 1px #de8535;
+    padding-bottom: 2px;
+    margin-bottom: 12px;
+}
+.t1v1 .skills-block ul {
+    line-height: 14px;
+    margin-bottom: 6px;
+    list-style-type: none;
+    list-style: none;
+}
+.t1v1 .skills-block ul:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .skills-block ul li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 16px;
+    list-style: none;
+}
+.t1v1 .skills-block ul li::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    background: #de8535;
+    border-radius: 50%;
+    top: 6px;
+}
+.t1v1 .skills-block ul li:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .other-block {
+    padding: 0 18px 15px 18px;
+}
+.t1v1 .other-block p {
+    margin-bottom: 6px;
+}
+.t1v1 .other-block p:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .other-block h2 {
+    font-size: 16px;
+    line-height: 16px;
+    color: #de8535;
+    border-bottom: solid 1px #de8535;
+    padding-bottom: 2px;
+    margin-bottom: 12px;
+}
+.t1v1 .other-block .add-bot-mgn {
+    margin-bottom: 12px;
+}
+.t1v1 .other-block .add-bot-mgn:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .other-block h3 {
+    margin-bottom: 5px;
+}
+.t1v1 .other-block h3 span {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 3px;
+    display: inline;
+    padding-right: 4px;
+}
+.t1v1 .other-block h3 i {
+    display: inline;
+    font-size: 10px;
+    line-height: 14px;
+    font-style: normal;
+}
+.t1v1 .other-block ul {
+    margin-bottom: 6px;
+    list-style-type: none;
+    list-style: none;
+}
+.t1v1 .other-block ul:last-child {
+    margin-bottom: 0;
+}
+.t1v1 .other-block ul li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 16px;
+    list-style: none;
+}
+.t1v1 .other-block ul li::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    background: #de8535;
+    border-radius: 50%;
+    top: 6px;
+}
+.t1v1 .other-block ul li:last-child {
+    margin-bottom: 0;
+}
+.font-size-8 {
+    font-size: 10px;
+    line-height: 14px;
+}
+.t1v1 .small-para {
+    font-size: 9px;
+    line-height: 13px;
+}
+.t1v1 .small-para h3 span {
+    font-size: 10px !important;
+    line-height: 16px !important;
+}
+.t1v1 .small-para h3 i {
+    font-size: 9px !important;
+    line-height: 15px !important;
+}
+.t1v1 .medium-para {
+    font-size: 12px;
+    line-height: 16px;
+}
+.t1v1 .medium-para h3 span {
+    font-size: 14px !important;
+    line-height: 20px !important;
+}
+.t1v1 .medium-para h3 i {
+    font-size: 12px !important;
+    line-height: 16px !important;
+}
+.t1v1 .large-para {
+    font-size: 14px;
+    line-height: 22px;
+}
+.t1v1 .large-para h3 span {
+    font-size: 16px !important;
+    line-height: 22px !important;
+}
+.t1v1 .large-para h3 i {
+    font-size: 14px !important;
+    line-height: 20px !important;
+}
+.t1v1 .large-para li::before {
+    width: 5px;
+    height: 5px;
+    top: 9px;
+}
+.t1v1 h2.small-title {
+    font-size: 14px;
+    line-height: 14px;
+}
+.t1v1 h2.medium-title {
+    font-size: 18px;
+    line-height: 18px;
+}
+.t1v1 h2.large-title {
+    font-size: 20px;
+    line-height: 20px;
+}
+.t1v1 h2.extra-large-title {
+    font-size: 22px;
+    line-height: 22px;
+}
+.t1v1 .header-part .outer-header-left .header-left .logo-area.small-title {
+    font-size: 32px;
+    line-height: 90px;
+}
+.t1v1 .header-part .outer-header-left .header-left .logo-area.medium-title {
+    font-size: 40px;
+    line-height: 90px;
+}
+.t1v1 .header-part .outer-header-left .header-left .logo-area.large-title {
+    font-size: 44px;
+    line-height: 90px;
+}
+.t1v1 .header-part .outer-header-left .header-left .logo-area.extra-large-title {
+    font-size: 46px;
+    line-height: 90px;
+}
+.t1v1 .header-part .outer-header-left .header-left .name-with-profession .resume-name.small-title {
+    font-size: 30px;
+    line-height: 40px;
+}
+.t1v1 .header-part .outer-header-left .header-left .name-with-profession .resume-name.medium-title {
+    font-size: 38px;
+    line-height: 48px;
+}
+.t1v1 .header-part .outer-header-left .header-left .name-with-profession .resume-name.large-title {
+    font-size: 40px;
+    line-height: 50px;
+}
+.t1v1 .header-part .outer-header-left .header-left .name-with-profession .resume-name.extra-large-title {
+    font-size: 42px;
+    line-height: 52px;
+}
+.t1v1 .header-part .outer-header-left .header-left .name-with-profession .resume-profession.small-title {
+    font-size: 14px;
+    line-height: 18px;
+}
+.t1v1 .header-part .outer-header-left .header-left .name-with-profession .resume-profession.medium-title {
+    font-size: 18px;
+    line-height: 24px;
+}
+.t1v1 .header-part .outer-header-left .header-left .name-with-profession .resume-profession.large-title {
+    font-size: 20px;
+    line-height: 28px;
+}
+.t1v1 .header-part .outer-header-left .header-left .name-with-profession .resume-profession.extra-large-title {
+    font-size: 22px;
+    line-height: 30px;
+}
+.t1v1.medium-para h3 span {
+    font-size: 14px;
+    line-height: 20px;
+}
+.t1v1.medium-para h3 i {
+    font-size: 12px;
+    line-height: 16px;
+}
+.t1v1.color-variant-one .logo-area {
+    background-color: #de8535 !important;
+}
+.t1v1.color-variant-one .resume-name {
+    color: #de8535 !important;
+}
+.t1v1.color-variant-one .header-right {
+    color: #de8535 !important;
+}
+.t1v1.color-variant-one h2 {
+    color: #de8535;
+    border-bottom: solid 1px #de8535;
+}
+.t1v1.color-variant-one ul li::before {
+    background: #de8535 !important;
+}
+.t1v1 a {
+    pointer-events: none;
+    cursor: default;
+}
+.ff-libre-regular {
+    font-family: 'Libre Baskerville';
+    font-weight: normal;
+    font-style: normal;
+}
+.ff-libre-regular b, .ff-libre-regular strong {
+    font-family: 'Libre Baskerville';
+    font-weight: bold;
+}
+.ff-libre-regular em {
+    font-family: 'Libre Baskerville';
+    font-weight: normal;
+    font-style: italic;
+}
+.ff-libre-regular em strong {
+    font-family: 'Libre Baskerville';
+    font-weight: bold;
+    font-style: italic;
+}
+.ff-libre-regular i {
+    font-family: 'Libre Baskerville';
+    font-weight: normal;
+    font-style: italic;
+}
+.ff-ptsans-regular {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+}
+.ff-ptsans-regular b, .ff-ptsans-regular strong {
+    font-family: 'PT Sans';
+    font-weight: 700;
+}
+.ff-ptsans-regular em {
+    font-family: 'PT Sans';
+    font-style: italic;
+    font-weight: 400;
+}
+.ff-ptsans-regular em strong {
+    font-family: 'PT Sans';
+    font-style: italic;
+    font-weight: 700;
+}
+.ff-ptsans-regular i {
+    font-family: 'PT Sans';
+    font-style: italic;
+    font-weight: 400;
+}
+.ff-futura-regular {
+    font-family: 'Futura Md BT';
+    font-style: normal;
+    font-weight: 400;
+}
+.ff-futura-regular b, .ff-futura-regular strong {
+    font-family: 'Futura BdCn BT';
+    font-weight: 700;
+}
+.ff-futura-regular em {
+    font-family: 'Futura Md BT';
+    font-style: italic;
+    font-weight: 400;
+}
+.ff-futura-regular em strong {
+    font-family: 'Futura BdCn BT';
+    font-style: italic;
+    font-weight: 700;
+}
+.ff-futura-regular i {
+    font-family: 'Futura Md BT';
+    font-style: italic;
+    font-weight: 400;
+}
+.ff-jost-light {
+    font-family: 'Jost';
+    font-weight: 400;
+}
+.ff-jost-light b, .ff-jost-light strong {
+    font-family: 'Jost';
+    font-weight: 700;
+}
+.ff-jost-light em {
+    font-family: 'Jost';
+    font-weight: 400;
+    font-style: italic;
+}
+.ff-jost-light em strong {
+    font-family: 'Jost';
+    font-weight: 700;
+    font-style: italic;
+}
+.ff-jost-light i {
+    font-family: 'Jost';
+    font-weight: 400;
+    font-style: italic;
+}
+.ff-jost-medium {
+    font-family: 'Jost';
+    font-weight: 500;
+}
+.ff-jost-medium b, .ff-jost-medium strong {
+    font-family: 'Jost';
+    font-weight: 700;
+}
+.ff-jost-medium em {
+    font-family: 'Jost';
+    font-weight: 700;
+    font-style: italic;
+}
+.ff-jost-medium em strong {
+    font-family: 'Jost';
+    font-weight: 700;
+    font-style: italic;
+}
+.ff-jost-medium i {
+    font-family: 'Jost';
+    font-weight: 700;
+    font-style: italic;
+}
+.ff-caladea-bold {
+    font-family: 'Caladea';
+    font-weight: 700;
+}
+.ff-barlow-semi-condensed {
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 500;
+}
+.ff-source-sans-light {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 300;
+}
+.ff-source-sans-light b, .ff-source-sans-light strong {
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+}
+.ff-source-sans-light em {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 300;
+}
+.ff-source-sans-light em strong {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 700;
+}
+.ff-source-sans-light i {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 300;
+}
+.ff-source-sans-regular {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+}
+.ff-source-sans-regular b, .ff-source-sans-regular strong {
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+}
+.ff-source-sans-regular em {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 300;
+}
+.ff-source-sans-regular em strong {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 700;
+}
+.ff-source-sans-regular i {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 300;
+}
+.ff-merriweather-regular {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+}
+.ff-merriweather-regular b, .ff-merriweather-regular strong {
+    font-family: 'Merriweather';
+    font-weight: 700;
+}
+.ff-merriweather-regular em {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 400;
+}
+.ff-merriweather-regular em strong {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 700;
+}
+.ff-merriweather-regular i {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 400;
+}
+.ff-merriweather-bold {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-weight: 700;
+}
+.ff-montserrat-regular {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+}
+.ff-montserrat-regular b, .ff-montserrat-regular strong {
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+.ff-montserrat-regular em {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+}
+.ff-montserrat-regular em strong {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+}
+.ff-montserrat-regular i {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+}
+.ff-montserrat-bold {
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+.ff-raleway-regular {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+}
+.ff-raleway-regular b, .ff-raleway-regular strong {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+}
+.ff-raleway-regular em {
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 400;
+}
+.ff-raleway-regular em strong {
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 700;
+}
+.ff-raleway-regular i {
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 400;
+}
+.ff-raleway-bold {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+}
+.ff-roboto-regular {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+}
+.ff-roboto-regular b, .ff-roboto-regular strong {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+}
+.ff-roboto-regular em {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+}
+.ff-roboto-regular em strong {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+}
+.ff-roboto-regular i {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+}
+.ff-roboto-bold {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+}
+.ff-roboto-medium {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+}
+.ff-ubuntu-regular {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+}
+.ff-ubuntu-regular b, .ff-ubuntu-regular strong {
+    font-family: 'Ubuntu';
+    font-weight: 700;
+}
+.ff-ubuntu-regular em {
+    font-family: 'Ubuntu';
+    font-style: italic;
+    font-weight: 400;
+}
+.ff-ubuntu-regular em strong {
+    font-family: 'Ubuntu';
+    font-style: italic;
+    font-weight: 700;
+}
+.ff-ubuntu-regular i {
+    font-family: 'Ubuntu';
+    font-style: italic;
+    font-weight: 400;
+}
+.ff-ubuntu-bold {
+    font-family: 'Ubuntu';
+    font-weight: 700;
+}
+.ff-georgia-regular {
+    font-family: 'Georgia';
+    font-weight: normal;
+}
+.ff-georgia-regular i, .ff-georgia-regular em {
+    font-family: 'Georgia';
+    font-weight: normal;
+    font-style: italic;
+}
+.ff-georgia-regular strong {
+    font-family: 'Georgia';
+    font-weight: bold;
+}
+.ff-georgia-bold {
+    font-family: 'Georgia';
+    font-weight: bold;
+}
+.ff-georgia-bold i, .ff-georgia-bold em {
+    font-family: 'Georgia';
+    font-weight: bold;
+}
+.ff-garamond-regular {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+}
+.ff-garamond-regular i, .ff-garamond-regular em {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.ff-garamond-regular strong, .ff-garamond-regular b {
+    font-family: 'EB Garamond', serif;
+    font-weight: 700;
+}
+.ff-garamond-bold {
+    font-family: 'EB Garamond', serif;
+    font-weight: 700;
+}
+.ff-garamond-bold i, .ff-garamond-bold em {
+    font-family: 'EB Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
+}
+.ff-times-regular {
+    font-family: Times, serif;
+    font-weight: normal;
+    font-style: normal;
+}
+.ff-times-regular i, .ff-times-regular em {
+    font-family: Times, serif;
+    font-weight: normal;
+    font-style: italic;
+}
+.ff-times-regular strong {
+    font-family: Times, serif;
+    font-weight: bold;
+}
+.ff-times-bold {
+    font-family: Times, serif;
+    font-weight: bold;
+}
+.ff-times-bold i, .ff-times-bold em {
+    font-family: Times, serif;
+    font-weight: bold;
+    font-style: italic;
+}
+.ff-calibri-regular {
+    font-family: Calibri, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+.ff-calibri-regular i, .ff-calibri-regular em {
+    font-family: Calibri, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+}
+.ff-calibri-regular strong {
+    font-family: Calibri, sans-serif;
+    font-weight: bold;
+}
+.ff-calibri-bold {
+    font-family: Calibri, sans-serif;
+    font-weight: bold;
+}
+.ff-calibri-bold i, .ff-calibri-bold em {
+    font-family: Calibri, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+.ff-arial-regular {
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+.ff-arial-regular i, .ff-arial-regular em {
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+}
+.ff-arial-regular strong {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+.ff-arial-bold {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+.ff-arial-bold i, .ff-arial-bold em {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+.ff-helvetica-regular {
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+.ff-helvetica-regular i, .ff-helvetica-regular em {
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+}
+.ff-helvetica-regular strong {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+}
+.ff-helvetica-bold {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+}
+.ff-helvetica-bold i, .ff-helvetica-bold em {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}

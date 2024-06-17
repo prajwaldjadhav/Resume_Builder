@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Resume Preview</title>
+  <link href="/static/css/resume-template2.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="resume-page">
+  <div id="resume">
+    <img src="/static/images/profileimage.jpeg" alt="{{ personal_info.full_name }}">
+    <h1>{{ personal_info.full_name }}</h1>
+    <p>Job Title: <a href="#">{{ personal_info.job_title }}</a></p>
+    <p>Email: <a href="#">{{ personal_info.email }}</a></p>
+    <p>Mobile: <a href="#">{{ personal_info.phone_number }}</a></p>
+    <p>Address: <a href="#">{{ personal_info.address }}</a></p>
+    <p>Github: <a href="#">{{ personal_info.github }}</a></p>
+    <p>LinkedIn: <a href="#">{{ personal_info.linkedin }}</a></p>
+    <p id="objective">{{ personal_info.professional_summary }}</p>
+
+    {% for experience in experiences %}
+    <dl>
+      <dt>Experience</dt>
+      <dd>
+        <h2>{{ experience.title }}
+          <span>{{ experience.start_date }} - {{ experience.end_date }}</span>
+        </h2>
+        <p>Company Name: {{ experience.company }}</p>
+        <p>{{ experience.description }}</p>
+      </dd>
+    </dl>
+    {% endfor %}
+
+    {% for education in educations %}
+    <dl>
+      <dt>Education</dt>
+      <dd>
+        <h2>{{ education.degree }} - {{ education.major }}
+          <span>{{ education.start_date }} - {{ education.end_date }}</span>
+        </h2>
+        <p>{{ education.school }}</p>
+      </dd>
+    </dl>
+    {% endfor %}
+
+    {% for certificate in certificates %}
+    <dl>
+      <dt>Certificates</dt>
+      <dd>
+        <h2>{{ certificate.certificate_name }}
+          <span>{{ certificate.issue_date }}</span>
+        </h2>
+        <p>Issued By: {{ certificate.issuing_organization }}</p>
+      </dd>
+    </dl>
+    {% endfor %}
+
+    {% for skill in skills %}
+    <dl>
+      <dt>Skills</dt>
+      <dd>
+        <p>{{ skill.skill_name }}</p>
+      </dd>
+    </dl>
+    {% endfor %}
+  </div>
+</div>

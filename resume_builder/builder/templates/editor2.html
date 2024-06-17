@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+
+{% block extra-css %}
+<style>
+  body { font-family: Arial, sans-serif; }
+  .resume-container { display: flex; justify-content: space-between; padding: 20px; }
+  .form-section, .preview-section { flex: 1; margin-right: 20px; }
+  .preview-section { border-left: 2px solid #ccc; padding-left: 20px; }
+  .button { padding: 10px 20px; margin: 10px 0; cursor: pointer; background-color: #007BFF; color: white; border: none; border-radius: 5px; }
+  .resume-preview { background: #fff; border: 1px solid #ccc; padding: 20px; }
+  .resume-preview h1, .resume-preview h2, .resume-preview h3 { color: #333; }
+  .resume-preview .section { margin-bottom: 20px; }
+</style>
+<link href="/static/css/fonts.css" rel="stylesheet">
+<link href="/static/css/new-editor.css" rel="stylesheet">
+<link href="/static/css/resume-template2.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+{% endblock %}
+
+{% block content %}
+<section>
+  <div class="resume-container">
+    <div class="form-section">
+      <h2>Resume Fields</h2>
+      <form id="resumeForm" method="post" action="{% url 'editor' %}">
+        {% csrf_token %}
+        <div class="form-container">
+          <h3>Personal Information</h3>
+          {{ resume_form.as_p }}
+
+          <h3>Experience</h3>
+          {{ experience_formset.management_form }}
+          <div id="experience-section">
+            {% for form in experience_formset %}
+              <div class="experience-form">
+                {{ form.as_p }}
+              </div>
+            {% endfor %}
+          </div>
+
+          <h3>Education</h3>
+          {{ education_formset.management_form }}
+          <div id="education-section">
+            {% for form in education_formset %}
+              <div class="education-form">
+                {{ form.as_p }}
+              </div>
+            {% endfor %}
+          </div>
+
+          <h3>Certificates</h3>
+          {{ certificate_formset.management_form }}
+          <div id="certificate-section">
+            {% for form in certificate_formset %}
+              <div class="certificate-form">
+                {{ form.as_p }}
+              </div>
+            {% endfor %}
+          </div>
+
+          <h3>Skills</h3>
+          {{ skill_formset.management_form }}
+          <div id="skill-section">
+            {% for form in skill_formset %}
+              <div class="skill-form">
+                {{ form.as_p }}
+              </div>
+            {% endfor %}
+          </div>
+
+        </div>
+        <button type="submit" class="button">Pay and Get Resume</button>
+      </form>
+    </div>
+    <div class="preview-section">
+      <h2>Resume Preview</h2>
+      <div id="preview-content" class="resume-preview" style="width: 101%;"></div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra-scripts %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('input', function() {
+      const form = document.getElementById('resumeForm');
+      const formData = new FormData(form);
+      
+      let previewHtml =
+      `<div id="resume-page">
+        <div id="resume">
+        <img src="/static/images/profileimage.jpeg" alt="James Moriarty">
+        <h1>${formData.get('full_name')}</h1>
+        <p>Job Title: <a href=#>${formData.get('job_title')}</a></p>
+        <p>Email: <a href=#>${formData.get('email')}</a></p>
+        <p>Mobile: <a href=#>${formData.get('phone_number')}</a></p>
+        <p>Address: <a href=#>${formData.get('address')}</a></p>
+        <p>Github: <a href=#>${formData.get('github')}</a></p>
+        <p>Linkedin: <a href=#>${formData.get('linkedin')}</a></p>
+
+        <p id="objective"> ${formData.get('professional_summary')} </p>`;
+        let expCount = parseInt(formData.get('exp-TOTAL_FORMS'));
+        for (let i = expCount - 1; i >= 0; i--) {
+  previewHtml +=
+          `<dl>
+            <dt>Experience
+              <dd>
+                <h2>${formData.get(`exp-${i}-title`)}
+                  <span>${formData.get(`exp-${i}-start_date`)} - ${formData.get(`exp-${i}-end_date`)}</span>
+                </h2>
+                <p>Company Name: ${formData.get(`exp-${i}-company`)} </p>
+                <p> ${formData.get(`exp-${i}-description`)} </p>
+              </dd>
+            </dt>
+          </dl>`;
+        }
+
+        let eduCount = parseInt(formData.get('edu-TOTAL_FORMS'));
+        for (let i = eduCount - 1; i >= 0; i--) {
+  previewHtml +=
+          `<dl>
+            <dt>Education
+              <dd>
+                <h2>${formData.get(`edu-${i}-degree`)} - ${formData.get(`edu-${i}-major`)}
+                  <span>${formData.get(`edu-${i}-start_date`)} - ${formData.get(`edu-${i}-end_date`)}</span>
+                </h2>
+                <p> ${formData.get(`edu-${i}-school`)} </p>
+              </dd>
+            </dt>
+          </dl>`;
+        }
+
+        let certCount = parseInt(formData.get('cert-TOTAL_FORMS'));
+        for (let i = 0; i < certCount; i++) {
+  previewHtml +=
+          `<dl>
+            <dt>Certificates
+              <dd>
+                <h2>${formData.get(`cert-${i}-certificate_name`)}
+                  <span>${formData.get(`cert-${i}-issue_date`)}</span>
+                </h2>
+                <p> Issued By: ${formData.get(`cert-${i}-issuing_organization`)} </p>
+              </dd>
+            </dt>
+          </dl>`;
+        }
+
+        let skillCount = parseInt(formData.get('skill-TOTAL_FORMS'));
+        for (let i = 0; i < skillCount; i++) {
+  previewHtml +=
+          `<dl>
+            <dt>Skills
+              <dd>
+                <p>${formData.get(`skill-${i}-skill_name`)}</p>
+              </dd>
+            </dt>
+          </dl>
+          </div>
+          </div>`;
+        }
+
+        document.getElementById('preview-content').innerHTML = previewHtml;
+       
+     });
+   });
+</script>
+{% endblock %}

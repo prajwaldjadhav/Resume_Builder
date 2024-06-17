@@ -1,0 +1,121 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.resume-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 35px;
+}
+
+/* Form section */
+.form-section {
+    width: 45%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-section input,
+.form-section select {
+    width: calc(80% - 15px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-section textarea {
+    width: calc(50% - 15px);
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-section button {
+    padding: 10px 20px;
+    background-color: #388da8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.form-section button:last-child {
+    margin-right: 0;
+}
+
+.form-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Preview section */
+.preview-section {
+    width: 45%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.preview-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.preview-section p {
+    margin-bottom: 10px;
+}
+
+/* Add section button */
+.add-section-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-section-button:hover {
+    background-color: #218838;
+}
+
+/* Delete entry button */
+.deleteEntry {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.deleteEntry:hover {
+    background-color: #c82333;
+}

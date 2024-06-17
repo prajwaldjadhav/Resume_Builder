@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Quick Resume</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/images/favicon.ico" rel="icon">
+  <!-- <link href="/static/images/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="/static/css/main.css" rel="stylesheet">
+  {% block extra-css %}
+  {% endblock %}
+
+  <!-- =======================================================
+  * Template Name: QuickStart
+  * Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
+  * Updated: May 04 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+  {% block header %}
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="/" class="logo d-flex align-items-center me-auto">
+        <img src="/static/images/logo.png" alt="">
+        <h1 class="sitename">uick Resume</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+            {% if user.is_authenticated %}
+                <li>Welcome, {{ user.username }}</li>
+                <li><a href="/logout_user">Logout</a></li>
+            {% else %}
+                <li><a href="/login_user">Login</a></li>
+                <li><a href="/register">Register</a></li>
+            {% endif %}
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="/choose_template">Build My Resume</a>
+
+    </div>
+  </header>
+  {% endblock %}
+
+  {% block content %}
+  <main class="main">
+    
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="hero-bg">
+        <img src="/static/images/hero-bg-light.webp" alt="">
+      </div>
+      <div class="container text-center">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <h1 data-aos="fade-up" class="">Welcome to <span>Quick Resume</span></h1>
+          <p data-aos="fade-up" data-aos-delay="100" class="">Quickly build your resume now and set the stage for success<br></p>
+          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+            <a href="#featured-services" class="btn-get-started">Get Started</a>
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          </div>
+          <img src="/static/images/hero-resume.png" class="img-fluid hero-img" alt="" data-aos="zoom-out" data-aos-delay="300">
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Featured Services Section -->
+    <section id="featured-services" class="featured-services section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-gear-fill"></i></div>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Dynamic Customization</a></h4>
+                <p class="description">Our builder allows for detailed personalization of each resume section, from professional experiences to educational backgrounds, ensuring every document is tailored to showcase the user’s unique qualifications and skills</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-pencil-square"></i></div>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Interactive Editing</a></h4>
+                <p class="description">Users enjoy a seamless editing experience with instant visual feedback. Each entry or modification is reflected in a live preview, enabling real-time adjustments and refinements to create the perfect resume</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-arrow-right-circle-fill"></i></div>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Streamlined Progression</a></h4>
+                <p class="description">Move effortlessly through resume creation with structured, step-by-step sections that guide the user from personal information to skills, ensuring a comprehensive and professional presentation without the usual complexity</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Services Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p class="who-we-are">Who We Are</p>
+            <h3>Empowering Your Career Path</h3>
+            <p class="fst-italic">
+              We specialize in creating tools that not only simplify the job application process but also enhance your chances of securing your dream job. Our resume builder is designed with the latest industry standards to ensure you make a powerful impression on every hiring manager.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Our customers are at the heart of everything we do. We prioritize their needs and strive to exceed their expectations at every turn.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Excellence is our standard. We are dedicated to delivering top-notch products and services that reflect our unwavering commitment to quality and professionalism.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>We embrace change and are always looking for new ways to improve and evolve.</span></li>
+            </ul>
+            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+          <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+              <img src="/static/images/about-company.avif" class="img-fluid" alt="">
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+
+      <div class="container" data-aos="fade-up">
+        <p style="margin-bottom: 15px; color: rgba(var(--default-color-rgb), 0.6); text-align: center;">Subscribers have been hired by:</p>
+        <div class="row gy-4">
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="/static/images/clients/client-1.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="/static/images/clients/client-2.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="/static/images/clients/client-3.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="/static/images/clients/client-4.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="/static/images/clients/client-5.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="/static/images/clients/client-6.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Features</h2>
+        <p>Unlock Your Potential with Our Powerful Resume Builder</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row g-5">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-cyan position-relative">
+              <i class="bi bi-layout-text-window-reverse icon"></i>
+              <div>
+                <h3>User-Friendly Interface</h3>
+                <p>Intuitive and easy-to-use interface designed to streamline the resume creation process for users of all skill levels.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item item-orange position-relative">
+              <i class="bi bi-card-text icon"></i>
+              <div>
+                <h3>Customizable Templates</h3>
+                <p>A wide selection of professionally designed templates to choose from, allowing users to personalize their resumes according to their preferences and industry standards.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item item-teal position-relative">
+              <i class="bi bi-eye-fill icon"></i>
+              <div>
+                <h3>Real-Time Preview</h3>
+                <p>Instant preview functionality that enables users to see how their resume looks as they make edits, ensuring a visually appealing final product.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item item-red position-relative">
+              <i class="bi bi-list-ul icon"></i>
+              <div>
+                <h3>Multiple Section Entries</h3>
+                <p>Capability to add and manage multiple entries for each resume section, including work experience, education, skills, projects, and more.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item item-indigo position-relative">
+              <i class="bi bi-cloud-download-fill icon"></i>
+              <div>
+                <h3>Downloadable Formats</h3>
+                <p>Ability to download resumes in PDF format, making it easy to share and submit applications online or offline.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item item-pink position-relative">
+              <i class="bi bi-chat-square-text icon"></i>
+              <div>
+                <h3>Privacy and Security</h3>
+                <p>Assurance of data privacy and security measures to protect users' personal information and sensitive data throughout the resume creation process.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Elevate your career with our resume builder – hear what our satisfied users have to say!</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 1
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  I was blown away by how easy it was to create a professional resume using this platform. The customizable templates and real-time preview feature made the entire process a breeze. Highly recommended!
+                </p>
+                <div class="profile mt-auto">
+                  <img src="/static/images/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                  <h3>Michael Smith</h3>
+                  <h4>Marketing Manager</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  As a software engineer, I'm always looking for tools that are efficient and user-friendly. This resume builder exceeded my expectations. The ability to add multiple section entries and collaborate in real-time with colleagues made it stand out from the rest.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="/static/images/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                  <h3>Jessica Lee</h3>
+                  <h4>Software Engineer</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  I recently graduated from college and was struggling to create a professional resume that would catch the eye of employers. This platform provided me with customizable templates and content enhancement suggestions that helped me land my dream job!
+                </p>
+                <div class="profile mt-auto">
+                  <img src="/static/images/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                  <h3>Emily Johnson</h3>
+                  <h4>Recent Graduate</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  As an HR manager, I've seen my fair share of resumes. This resume builder offers downloadable formats in various file types, making it easy for candidates to submit their applications. It's now my go-to recommendation for job seekers.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="/static/images/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                  <h3>David Miller</h3>
+                  <h4>HR Manager</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  I've been using this resume builder for years to showcase my diverse skill set as a freelance writer. The privacy and security measures in place give me peace of mind, knowing that my personal information is safe. It's a game-changer for anyone looking to elevate their career.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="/static/images/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                  <h3>Sarah Thompson</h3>
+                  <h4>Freelance Writer</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+    
+  </main>
+  {% endblock %}
+
+  {% block footer %}
+  <footer id="footer" class="footer position-relative">
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Quick Resume</strong><span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+    </div>
+
+  </footer>
+  {% endblock %}
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/vendor/php-email-form/validate.js"></script>
+  <script src="/static/vendor/aos/aos.js"></script>
+  <script src="/static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="/static/js/main.js"></script>
+  {% block extra-scripts %}
+  {% endblock %}
+
+</body>
+
+</html>

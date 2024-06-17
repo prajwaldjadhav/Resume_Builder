@@ -1,0 +1,39 @@
+<!-- References -->
+<!-- https://docs.djangoproject.com/en/5.0/topics/auth/default/#auth-admin:~:text=Here%E2%80%99s%20a%20sample%20registration/login.html%20template%20you%20can%20use%20as%20a%20starting%20point.%20It%20assumes%20you%20have%20a%20base.html%20template%20that%20defines%20a%20content%20block%3A -->
+{% extends "base.html" %}
+{% block content %}
+<section id="hero" class="hero section">
+  <div class="hero-bg">
+    <img src="/static/images/hero-bg-light.webp" alt="">
+  </div>
+<div class="container">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-xxl-11">
+        <div class="card border-light-subtle shadow-sm">
+          <div class="row g-0">
+            <div class="col-12 col-md-6 col-12 col-md-6 d-flex align-content-center flex-wrap">
+              <img class="img-fluid rounded-start object-fit-cover" loading="lazy" src="/static/images/paymentdone.avif" alt="Welcome back you've been missed!">
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+              <div class="col-12 col-lg-11 col-xl-10">
+                <div class="card-body p-3 p-md-4 p-xl-5">
+                  <div class="row">
+                    <div class="col-12">
+                        <div class="mb-5">
+                          <h3>Congratulations! Your payment has been successfully processed, and your tailored resume PDF is already on its way to your email inbox.
+                             Get ready to take your career to new heights with your professionally crafted resume!</h3>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+</section>
+{% endblock %}
